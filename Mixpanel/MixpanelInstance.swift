@@ -1564,7 +1564,7 @@ extension MixpanelInstance {
 
             if let oldValue = oldValue as? Array<MixpanelType> {
                 var vals = oldValue
-                if !vals.contains {$0.equals(rhs: groupID)} {
+                if !vals.contains(where: {$0.equals(rhs: groupID)}) {
                     vals.append(groupID)
                     superProperties[groupKey] = vals
                 }
